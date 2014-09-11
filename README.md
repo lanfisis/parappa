@@ -2,8 +2,8 @@
 
 A reader library to nicely scrape content from the interweb. Largely inspired by [newspaper](https://github.com/codelucas/newspaper)  python library. 
 
-How it work
-=========
+How it works
+============
 
 Basically you can use the reader like this:
 ```php
