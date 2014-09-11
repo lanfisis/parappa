@@ -1,0 +1,23 @@
+
+{
+    "name": "lanfisis/parappa",
+    "type": "library",
+    "description": "A reader library to nicely scrap content from the interweb",
+    "keywords": ["scraper"],
+    "homepage": "https://github.com/lanfisis/parappa",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "David Buros",
+            "email": "david.buros@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "guzzlehttp/guzzle": "~4.0",
+        "atoum/atoum": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "Parappa": "src/" }
+    }
+}

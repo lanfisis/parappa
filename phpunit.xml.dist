@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./tests/units/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="Parappa Test Suite">
+            <directory suffix="Test.php">./tests/units/Parappa/Test/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/Parappa/</directory>
+        </whitelist>
+    </filter>
+</phpunit>
