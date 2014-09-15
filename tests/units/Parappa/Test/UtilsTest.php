@@ -4,6 +4,7 @@ namespace Parappa\Test;
 
 use PHPUnit_Framework_TestCase;
 use Parappa\Reader;
+use Parappa\Scraper\Url;
 
 class UtilsTest extends PHPUnit_Framework_TestCase
 {
@@ -12,7 +13,7 @@ class UtilsTest extends PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $this->reader = new Reader('<h1>test</h1>');
+        $this->reader = new Reader(new Url('http://www.google.com'));
     }
 
     protected function tearDown()
