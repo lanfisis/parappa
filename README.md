@@ -10,7 +10,7 @@ Basically you can use the reader like this:
 use Parappa\Reader;
 use Parappa\Scraper\Url;
 
-$url = 'http://www.fier-panda.fr/article/apple-decline-et-nesperez-pas-en-tirer-du-cidre';
+$url = 'http://www.fier-panda.fr/article/le-mouv-brule';
 $reader = new Reader(new Url($url));
 
 echo $reader->getTitle();
