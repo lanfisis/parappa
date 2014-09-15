@@ -13,8 +13,8 @@ use Parappa\Scraper\Url;
 $url = 'http://www.fier-panda.fr/article/le-mouv-brule';
 $reader = new Reader(new Url($url));
 
-echo $reader->getTitle();
-echo $reader->getBody();
+echo $reader->getTitle(); //LE MOUV' BRÛLE 
+echo $reader->getBody(); //Il y a quelques mois, la direction ...
 ```
 
 Licence
