@@ -25,13 +25,6 @@ class Reader
     protected $scraper;
 
     /**
-     * Resource
-     *
-     * @var string
-     */
-    protected $resource;
-
-    /**
      * Resource identifier
      *
      * @var strin
@@ -62,14 +55,12 @@ class Reader
     /**
      * Constructor!
      *
-     * @param string  $resource A resource (like an url or a file name)
-     * @param Scraper $scraper  A content scraper
+     * @param Scraper $scraper A content scraper
      *
      * @return void
      */
-    public function __construct($resource, Scraper $scraper)
+    public function __construct(Scraper $scraper)
     {
-        $this->resource = $resource;
         $this->scraper = $scraper;
         $this->scrap()->parse();
     }
@@ -104,8 +95,8 @@ class Reader
     protected function scrap()
     {
         try {
-            $this->content = $this->scraper->getContent($this->resource);
-            $this->identifier = $this->scraper->getIdentifier($this->resource);
+            $this->content = $this->scraper->getContent();
+            $this->identifier = $this->scraper->getIdentifier();
             return $this;
         } catch (\Exception $e) {
             throw new Exception($e->getMessage(), $e->getCode(), $e);

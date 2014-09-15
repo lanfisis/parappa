@@ -18,12 +18,12 @@ interface ScraperInterface
      *
      * @return string
      */
-    public function getContent($url);
+    public function getContent();
 
     /**
      * Returns resource identifier
      *
      * @return string
      */
-    public function getIdentifier($url);
+    public function getIdentifier();
 }

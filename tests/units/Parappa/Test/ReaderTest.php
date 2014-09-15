@@ -13,8 +13,7 @@ class ReaderTest extends PHPUnit_Framework_TestCase
     protected function setUp()
     {
         parent::setUp();
-        $url = 'http://www.google.com';
-        $this->reader = new Reader($url, new Url);
+        $this->reader = new Reader(new Url('http://www.google.com'));
     }
 
     protected function tearDown()
@@ -40,6 +39,6 @@ class ReaderTest extends PHPUnit_Framework_TestCase
         $this->setExpectedException(
             '\Parappa\ParappaException'
         );
-        new Reader('http://www.aninexistingdomainname.nottld', new Url);
+        new Reader(new Url('http://www.aninexistingdomainname.nottld'));
     }
 }

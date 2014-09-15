@@ -12,30 +12,48 @@
 namespace Parappa\Scraper;
 
 use GuzzleHttp\Client;
+use Parappa\ParappaException as Exception;
 
 class Url implements ScraperInterface
 {
     /**
-     * Returns content from an url using
+     * Url to read
      *
-     * @param string $url Content url
+     * @var string
+     */
+    protected $url;
+
+    /**
+     * Constructor!
+     *
+     * @param string $url Url to read
+     */
+    public function __construct($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * Returns content from an url using GuzzleHttp\Client
      *
      * @return string
      */
-    public function getContent($url)
+    public function getContent()
     {
-        return (string)(new Client())->get($url)->getBody();
+        try {
+            return (string)(new Client())->get($this->url)->getBody();
+        } catch (\Exception $e) {
+            throw new Exception($e->getMessage(), $e->getCode(), $e);
+        }
     }
 
     /**
      * Returns url host as identifier
      *
-     * @param string $url Content url
-     *
      * @return string
      */
-    public function getIdentifier($url)
+    public function getIdentifier()
     {
-        return parse_url($url, PHP_URL_HOST);
+        return parse_url($this->url, PHP_URL_HOST);
     }
 }

@@ -11,7 +11,13 @@ use Parappa\Reader;
 use Parappa\Scraper\Url;
 
 $url = 'http://www.fier-panda.fr/article/apple-decline-et-nesperez-pas-en-tirer-du-cidre';
-$reader = new Reader($url, new Url);
+$reader = new Reader(new Url($url));
+
 echo $reader->getTitle();
 echo $reader->getBody();
 ```
+
+Licence
+=======
+DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+Read term on LICENCE.md file
