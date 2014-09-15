@@ -2,6 +2,8 @@
 
 A reader library to nicely scrape content from the interweb. Largely inspired by [newspaper](https://github.com/codelucas/newspaper)  python library. 
 
+[![Build Status](https://travis-ci.org/lanfisis/parappa.svg?branch=master)](https://travis-ci.org/lanfisis/parappa)
+
 How it works
 ============
 
